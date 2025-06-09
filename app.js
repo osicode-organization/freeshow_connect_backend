@@ -1,5 +1,5 @@
 const express = require('express')
-const frisho = require("freeshow-api")
+const frisho = require("freeshow-api") //https://www.npmjs.com/package/freeshow-api
 
 const { sendHTTP, default: api } = frisho;
 const app = express()
