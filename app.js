@@ -20,21 +20,10 @@ app.get('/', async (req, res) => {
 
         const apiResponse = await postData("get_show", { "id": idfy[i] }, "http://localhost:5505");
         // console.log("apiResponse")
-        var lyt = Object.values(apiResponse.data.layouts);
+        var lyt = Object.values(apiResponse.data);
         // console.log("lyt")
-        console.log(lyt[0].slides)
+        console.log(apiResponse.data)
     }
-    // idfy.forEach(async (tst) => {
-    //     console.log(tst)
-
-    //     const apiResponse = await postData("get_show", { "id": tst }, "http://localhost:5505");
-    //     console.log("apiResponse")
-    //     var lyt = Object.values(apiResponse.data.layouts);
-    //     console.log("lyt")
-    //     console.log(lyt[0].slides)
-    // });
-
-
 
     console.log("Identify\n")
     res.send(allShows)
